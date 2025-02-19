@@ -4,10 +4,37 @@
     "editor.insertSpaces": true,
     // Configure glob patterns for excluding files and folders.
     "files.exclude": {
-        "**/.build": true,
-        "**/*.hex": true,
-        "**/*.bin": true,
-        "**/*.uf2": true
+      "**/.build": true,
+      "**/*.bin": true,
+      "**/*.hex": true,
+      "**/*.uf2": true,
+      "keyboards/[!l]*": true,
+      "keyboards/l[!a]*": true,
+      "keyboards/la[!m]*": true,
+      "keyboards/lam[!b]*": true,
+      "keyboards/lamb[!d]*": true,
+      "keyboards/lambd[!a]*": true,
+      "keyboards/lambda[!k]*": true,
+      "keyboards/lambdak[!b]*": true,
+      "docs/": true,
+      "builddefs/": true,
+      "data/": true,
+      "lib/": true,
+      "platform/": true,
+      "quantum/": true,
+      "tests/": true,
+      "tmk_core/": true,
+      "platforms/": true,
+      "users/": true,
+      "util/": true,
+    },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        ".gitignore": ".gitattributes, .gitmodules",
+        "Makefile": "paths.mk, .editorconfig, .clangd, .clang-format, *.sln, *.nix",
+        "Doxyfile": "doxygen-todo",
+        "LICENSE": "license_*.md",
+        "requirements.txt": "nose2.cfg, requirements*.txt, setup.cfg"
     },
     "files.associations": {
         "*.h": "c",
@@ -30,5 +57,13 @@
     },
     "clangd.arguments": [
         "--header-insertion=never"
+    ],
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "keyboards/**/keyboard.json",
+            ],
+            "url": ".vscode/schemas/keyboard.jsonschema"
+        }
     ]
 }
