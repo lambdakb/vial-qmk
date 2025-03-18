@@ -19,6 +19,7 @@
 
 #pragma once
 
+/* QMK Mouse Settings*/
 // #define ROTATIONAL_TRANSFORM_ANGLE 0
 #define POINTING_DEVICE_INVERT_Y
 
@@ -28,3 +29,15 @@
 #define SPI_SCK_PIN GP2
 #define SPI_MISO_PIN GP4
 #define SPI_MOSI_PIN GP3
+
+/* XIAO RPP2040 Internal Pins */
+#define XIAO_RP2040_RGB_POWER_PIN GP11
+
+/* RP2040 Tap Reset */
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
+
+/* Bootmagic Lite */
+#define BOOTMAGIC_ROW 0
+#define BOOTMAGIC_COLUMN 0
+// Press left click on boot to enter bootloader
