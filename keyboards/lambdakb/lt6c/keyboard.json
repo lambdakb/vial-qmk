@@ -1,0 +1,35 @@
+{
+    "bootloader": "rp2040",
+    "processor": "RP2040",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x06C4",
+        "vid": "0xFEED"
+    },
+    "features": {
+        "bootmagic": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true,
+        "pointing_device": true,
+        "rgblight": true
+    },
+    "matrix_pins": {
+        "direct": [
+            ["GP28", "GP27", "GP26", "GP29", "GP6", "GP7"]
+        ]
+    },
+    "rgblight": {
+        "led_count": 1,
+        "max_brightness": 40,
+        "animations": {
+            "breathing": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true
+        }
+    },
+    "ws2812": {
+        "pin": "GP12",
+        "driver": "vendor"
+    }
+}
