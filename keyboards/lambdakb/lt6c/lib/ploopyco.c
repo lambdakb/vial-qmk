@@ -51,12 +51,6 @@
 #ifndef PLOOPY_DRAGSCROLL_DIVISOR_V
 #    define PLOOPY_DRAGSCROLL_DIVISOR_V 8.0
 #endif
-#ifndef ENCODER_BUTTON_ROW
-#    define ENCODER_BUTTON_ROW 0
-#endif
-#ifndef ENCODER_BUTTON_COL
-#    define ENCODER_BUTTON_COL 0
-#endif
 
 keyboard_config_t keyboard_config;
 uint16_t          dpi_array[] = PLOOPY_DPI_OPTIONS;
@@ -100,14 +94,6 @@ bool process_record_kb(uint16_t keycode, keyrecord_t* record) {
     if (debug_mouse) {
         dprintf("KL: kc: %u, col: %u, row: %u, pressed: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed);
     }
-
-    // Update Timer to prevent accidental scrolls
-#ifdef ENCODER_ENABLE
-    if ((record->event.key.col == ENCODER_BUTTON_COL) && (record->event.key.row == ENCODER_BUTTON_ROW)) {
-        lastMidClick      = timer_read();
-        is_scroll_clicked = record->event.pressed;
-    }
-#endif
 
     if (!process_record_user(keycode, record)) {
         return false;
