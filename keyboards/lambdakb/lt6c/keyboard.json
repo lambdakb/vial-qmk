@@ -1,6 +1,11 @@
 {
-    "bootloader": "rp2040",
+    "manufacturer": "LambdaKB.dev",
+    "keyboard_name": "LT6C",
+    "maintainer": "0rax",
+    "url": "https://lambdakb.dev/devices/lt6c",
     "processor": "RP2040",
+    "bootloader": "rp2040",
+    "keyboard_folder": "lambdakb/lt6c",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x06C4",
@@ -19,18 +24,36 @@
             ["GP28", "GP27", "GP26", "GP29", "GP6", "GP7"]
         ]
     },
+    "bootmagic": {
+        "matrix": [0, 0]
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP12"
+    },
     "rgblight": {
-        "led_count": 1,
-        "max_brightness": 40,
         "animations": {
             "breathing": true,
             "rainbow_mood": true,
             "rainbow_swirl": true
+        },
+        "led_count": 1,
+        "max_brightness": 100
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"label": "Top Left Left", "matrix": [0, 1], "x": 0, "y": 0, "h": 2},
+                {"label": "Top Left", "matrix": [0, 2], "x": 1.25, "y": 0, "h": 1.25},
+                {"label": "Top Right", "matrix": [0, 3], "x": 2.5, "y": 0, "h": 1.25},
+                {"label": "Top Right Right", "matrix": [0, 4], "x": 3.75, "y": 0, "h": 2},
+                {"label": "Bottom Left", "matrix": [0, 0], "x": 0, "y": 2.25, "w": 1.75, "h": 2},
+                {"label": "Bottom Right", "matrix": [0, 5], "x": 3, "y": 2.25, "w": 1.75, "h": 2}
+            ]
         }
     },
-    "ws2812": {
-        "pin": "GP12",
-        "driver": "vendor"
+    "dynamic_keymap": {
+        "layer_count": 8
     },
     "keycodes": [
         {"key": "DPI_CONFIG", "label": "DPI Config", "aliases": ["DPI"]},

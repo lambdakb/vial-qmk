@@ -12,10 +12,10 @@ void keyboard_pre_init_kb(void) {
     gpio_set_pin_output(GP17);
     gpio_write_pin_high(GP17);
 
-    // Enable internal addressable RGB led (NeoPixel)
-    gpio_set_pin_output(XIAO_RP2040_RGB_POWER_PIN);
-    gpio_write_pin_high(XIAO_RP2040_RGB_POWER_PIN);
+    // Enable onboard addressable RGB led (NeoPixel)
+    gpio_set_pin_output(GP11);
+    gpio_write_pin_high(GP11);
 
-    // Call user pre init code
+    // Call user pre-init code
     keyboard_pre_init_user();
 }
