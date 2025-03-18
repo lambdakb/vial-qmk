@@ -1,2 +1,2 @@
 POINTING_DEVICE_DRIVER = pmw3360
-SRC += ploopyco.c
+SRC += lib/ploopyco.c

@@ -31,5 +31,9 @@
     "ws2812": {
         "pin": "GP12",
         "driver": "vendor"
-    }
+    },
+    "keycodes": [
+        {"key": "DPI_CONFIG", "label": "DPI Config", "aliases": ["DPI"]},
+        {"key": "DRAG_SCROLL", "label": "Drag Scroll", "aliases": ["DRAGSCR"]}
+    ]
 }
