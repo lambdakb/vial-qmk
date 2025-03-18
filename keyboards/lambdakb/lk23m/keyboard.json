@@ -1,8 +1,17 @@
 {
-    "bootloader": "rp2040",
-    "development_board": "promicro_rp2040",
+    "manufacturer": "LambdaKB.dev",
+    "keyboard_name": "LK23M",
+    "maintainer": "0rax",
+    "url": "https://lambdakb.dev/devices/lk23m",
     "board": "GENERIC_PROMICRO_RP2040",
-    "diode_direction": "COL2ROW",
+    "development_board": "promicro_rp2040",
+    "bootloader": "rp2040",
+    "keyboard_folder": "lambdakb/lk23m",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x17BD",
+        "vid": "0xFEED"
+    },
     "features": {
         "bootmagic": true,
         "command": false,
@@ -13,6 +22,7 @@
         "nkro": true,
         "oled": true
     },
+    "diode_direction": "COL2ROW",
     "matrix_pins": {
         "cols": ["GP22", "GP20", "GP23", "GP21"],
         "rows": ["GP27", "GP26", "GP6", "GP7", "GP8", "GP9"]
@@ -23,12 +33,36 @@
             {"pin_a": "GP28", "pin_b": "GP29", "resolution": 4}
         ]
     },
-    "usb": {
-        "device_version": "1.0.0",
-        "pid": "0x17BD",
-        "vid": "0xFEED"
+    "layouts": {
+        "LAYOUT_numpad_6x4": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0},
+                {"matrix": [0, 1], "x": 1, "y": 0},
+                {"matrix": [0, 2], "x": 2, "y": 0},
+                {"matrix": [0, 3], "x": 3, "y": 0},
+                {"matrix": [1, 0], "x": 0, "y": 1.25},
+                {"matrix": [1, 1], "x": 1, "y": 1.25},
+                {"matrix": [1, 2], "x": 2, "y": 1.25},
+                {"matrix": [1, 3], "x": 3, "y": 1.25},
+                {"matrix": [2, 0], "x": 0, "y": 2.25},
+                {"matrix": [2, 1], "x": 1, "y": 2.25},
+                {"matrix": [2, 2], "x": 2, "y": 2.25},
+                {"matrix": [2, 3], "x": 3, "y": 2.25},
+                {"matrix": [3, 0], "x": 0, "y": 3.25},
+                {"matrix": [3, 1], "x": 1, "y": 3.25},
+                {"matrix": [3, 2], "x": 2, "y": 3.25},
+                {"matrix": [3, 3], "x": 3, "y": 3.25},
+                {"matrix": [4, 0], "x": 0, "y": 4.25},
+                {"matrix": [4, 1], "x": 1, "y": 4.25},
+                {"matrix": [4, 2], "x": 2, "y": 4.25},
+                {"matrix": [5, 0], "x": 0, "y": 5.25},
+                {"matrix": [5, 1], "x": 1, "y": 5.25},
+                {"matrix": [5, 2], "x": 2, "y": 5.25},
+                {"matrix": [4, 3], "x": 3, "y": 4.25, "h": 2}
+            ]
+        }
     },
     "keycodes": [
-        { "key": "KC_DBL0", "description": "Double 0 key" }
+        {"key": "KC_DBL0", "label": "Double 0 key", "aliases": ["DBL0"]}
     ]
 }

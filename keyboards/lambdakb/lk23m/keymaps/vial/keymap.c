@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ┌────┬────┬────┬────┐
      * │Prev│Play│Next│Mute│
      * ├────┼────┼────┼────┤
-     * │Home│  ↑ │PgUo│    │
+     * │Home│  ↑ │PgUp│    │
      * ├────┼────┼────┼────┤
      * │  ← │    │ →  │    │
      * ├────┼────┼────┼────┤
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └────┴────┴────┴────┘
      */
     [_NAV] = LAYOUT_numpad_6x4(
-        QK_BOOT, _______, _______, TO(_NUM),
+        KC_ESC, _______, _______, TO(_NUM),
         KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE,
         KC_HOME, KC_UP,   KC_PGUP, XXXXXXX,
         KC_LEFT, XXXXXXX, KC_RGHT, XXXXXXX,

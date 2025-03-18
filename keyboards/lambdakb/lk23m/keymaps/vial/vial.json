@@ -1,8 +1,8 @@
 {
-  "name": "LambdaKB.dev LK23M",
-  "vendorId": "0xCEEB",
-  "productId": "0x17BD",
-  "lighting": "qmk_rgblight",
+  "lighting": "none",
+  "customKeycodes": [
+    {"name": "DBL0", "title": "Double 0 key", "shortName": "00"}
+  ],
   "matrix": {
     "rows": 6,
     "cols": 4
