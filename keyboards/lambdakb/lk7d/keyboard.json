@@ -20,7 +20,7 @@
         "mousekey": true,
         "nkro": true,
         "oled": true,
-        "rgblight": true
+        "rgb_matrix": true
     },
     "diode_direction": "COL2ROW",
     "matrix_pins": {
@@ -28,32 +28,91 @@
         "rows": ["GP26", "GP28", "GP2"]
     },
     "encoder": {
-        "rotary": [
-            {"pin_a": "GP1", "pin_b": "GP0", "resolution": 2}
-        ]
+        "rotary": [{ "pin_a": "GP1", "pin_b": "GP0", "resolution": 2 }]
     },
     "bootmagic": {
         "matrix": [1, 0]
     },
     "ws2812": {
         "driver": "vendor",
-        "pin": "GP3"
+        "pin": "GP3",
+        "rgbw": false
     },
-    "rgblight": {
-        "led_count": 1,
-        "max_brightness": 255
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "led_count": 6,
+        "animations": {
+            "solid_color": true,
+            "alpha_mods": true,
+            "gradient_up_down": true,
+            "gradient_left_right": true,
+            "breathing": true,
+            "colorband_sat": true,
+            "colorband_val": true,
+            "colorband_pinwheel_sat": true,
+            "colorband_pinwheel_val": true,
+            "colorband_spiral_sat": true,
+            "colorband_spiral_val": true,
+            "cycle_all": true,
+            "cycle_left_right": true,
+            "cycle_up_down": true,
+            "rainbow_moving_chevron": true,
+            "cycle_out_in": true,
+            "cycle_out_in_dual": true,
+            "cycle_pinwheel": true,
+            "cycle_spiral": true,
+            "dual_beacon": true,
+            "rainbow_beacon": true,
+            "rainbow_pinwheels": true,
+            "flower_blooming": true,
+            "raindrops": true,
+            "jellybean_raindrops": true,
+            "hue_breathing": true,
+            "hue_pendulum": true,
+            "hue_wave": true,
+            "pixel_rain": true,
+            "pixel_flow": true,
+            "pixel_fractal": true,
+            "typing_heatmap": true,
+            "digital_rain": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true,
+            "solid_reactive_wide": true,
+            "solid_reactive_cross": true,
+            "solid_reactive_nexus": true,
+            "splash": true,
+            "solid_splash": true,
+            "starlight": true,
+            "starlight_dual_sat": true,
+            "starlight_dual_hue": true,
+            "riverflow": true
+        },
+        "default": {
+            "on": true,
+            "animation": "cycle_spiral",
+            "val": 128,
+            "speed": 32
+        },
+        "layout": [
+            { "matrix": [1, 2], "x": 48, "y": 34, "flags": 4 },
+            { "matrix": [1, 1], "x": 29, "y": 34, "flags": 4 },
+            { "matrix": [1, 0], "x": 10, "y": 34, "flags": 4 },
+            { "matrix": [2, 0], "x": 10, "y": 53, "flags": 4 },
+            { "matrix": [2, 1], "x": 29, "y": 53, "flags": 4 },
+            { "matrix": [2, 2], "x": 48, "y": 53, "flags": 4 }
+        ]
     },
     "layouts": {
         "LAYOUT": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0},
-                {"matrix": [0, 2], "x": 2, "y": 0},
-                {"matrix": [1, 0], "x": 0, "y": 1},
-                {"matrix": [1, 1], "x": 1, "y": 1},
-                {"matrix": [1, 2], "x": 2, "y": 1},
-                {"matrix": [2, 0], "x": 0, "y": 2},
-                {"matrix": [2, 1], "x": 1, "y": 2},
-                {"matrix": [2, 2], "x": 2, "y": 2}
+                { "matrix": [0, 0], "x": 0, "y": 0 },
+                { "matrix": [0, 2], "x": 2, "y": 0 },
+                { "matrix": [1, 0], "x": 0, "y": 1 },
+                { "matrix": [1, 1], "x": 1, "y": 1 },
+                { "matrix": [1, 2], "x": 2, "y": 1 },
+                { "matrix": [2, 0], "x": 0, "y": 2 },
+                { "matrix": [2, 1], "x": 1, "y": 2 },
+                { "matrix": [2, 2], "x": 2, "y": 2 }
             ]
         }
     },
