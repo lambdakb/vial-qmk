@@ -117,6 +117,7 @@
         }
     },
     "dynamic_keymap": {
-        "layer_count": 4
+        "layer_count": 7,
+        "macro_count": 32
     }
 }
