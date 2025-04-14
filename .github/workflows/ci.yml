@@ -1,12 +1,17 @@
 name: CI
-on: [ pull_request, push, workflow_dispatch ]
+on:
+  pull_request:
+  push:
+    branches:
+      - lambdakb
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 env:
-  MANUFACTTURER: LambdaKB.dev
+  MANUFACTURER: LambdaKB.dev
   REGEX_ANSI_COLOR: 's/\x1b\[[0-9;]*[mGKHF]//g'
   REGEX_MAKE_OUTPUT: '/^g*make\[1]: \(Enter\|Leav\)ing directory ''/d'
 
@@ -18,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: (actions) Checkout Vial repo
+    - name: Checkout Vial repo
       uses: actions/checkout@v4
       with:
         persist-credentials: false
@@ -28,7 +33,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    container: ghcr.io/qmk/qmk_cli@sha256:16c4916e95b99bf88d27b15aec8db409ee17265d1710287fde248c6666508966
+    container: ghcr.io/qmk/qmk_cli@sha256:06287bd1f20194548eb5f97f8abe1466684e1cb4e5e6b764af2eb8e77fac2504
     strategy:
       fail-fast: true
       matrix:
@@ -36,7 +41,7 @@ jobs:
     name: Build ${{ matrix.keymap }} keymaps
 
     steps:
-    - name: (actions) Checkout Vial repo
+    - name: Checkout Vial repo
       uses: actions/checkout@v4
       with:
         persist-credentials: false
