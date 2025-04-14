@@ -32,13 +32,19 @@
         "pin": "GP12"
     },
     "rgblight": {
+       "driver": "ws2812",
+        "led_count": 1,
         "animations": {
             "breathing": true,
             "rainbow_mood": true,
-            "rainbow_swirl": true
+            "rainbow_swirl": true,
+            "rgbtest":true
         },
-        "led_count": 1,
-        "max_brightness": 100
+        "default": {
+            "on": false,
+            "animation": "static_light",
+            "val": 128
+        }
     },
     "layouts": {
         "LAYOUT": {
